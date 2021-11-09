@@ -5,7 +5,7 @@
 
 ### Method 1:- Setup XDC Network Masternode One-click Installer ###
 
-To qualify for Masternode on the XDC Network, you need **10,000,000 XDC**
+To qualify for a Masternode on the XDC Network, you need **10,000,000 XDC**
 
 
 **Operating System**: 
@@ -31,16 +31,16 @@ https://user-images.githubusercontent.com/92325549/137081568-f1c99c1f-b035-4ef1-
 
 
 
-**Step 3: Create a wallet for Masternode**
+**Step 3: Create a wallet for your Masternode**
 
-* Create your wallet address with Mnemonic Phrase or with Keystore (Preferred). We always recommend to use Keystore for running a Masternode. 
+* Create your wallet address with Keystore (Preferred). We always recommend to use Keystore for running a Masternode. 
 * Enter a strong password while creating the wallet.
 * **Don't lose your Keystore file**
 * **Don't share it with anyone**  
 * **Always take a backup of your Keystore file.**
 * **If you lose it, all your funds will get locked.**
-* After creating backup, Download your Keystore file.
-* Now Access your wallet with Keystore and enter a valid password properly to access your wallet.
+* After creating backup, download your Keystore file.
+* Now Access your wallet with your Keystore file and enter the password used to create your wallet.
 * If you are hosting a Masternode on Testnet then copy the Wallet address and paste it on **[XDC Faucet](https://faucet.apothem.network/)** for the Testnet XDC
 
 
@@ -51,10 +51,10 @@ https://user-images.githubusercontent.com/92325549/137081588-b644bef6-5b5c-43c6-
 
 **Step 4: Host your Masternode**
 
-* For hosting the Masternode, you need to copy the private key and login the Masternode.
-* For uploading the KYC, click on the "Become a Masternode" 
-* Check the KYC criteria, the KYC file should be in pdf format only.
-* Once you upload your KYC, you need to enter the "Coinbase Address".  This can be found in the One Click Installer. Then you can click on the "Apply" button.
+* For hosting the Masternode, you need to copy the private key and login to the Masternode.
+* To upload the KYC document, click on "Become a Masternode" 
+* Check the KYC criteria, the KYC file should be in pdf format ONLY.
+* Once you upload your KYC document, you need to enter the "Coinbase Address".  This can be found in the One Click Installer. Then you can click on the "Apply" button.
 * You will receive the following notification **"You have successfully applied for Masternode"**
 * You can check the status of your Masternode here: **[master.apothem.network](https://master.apothem.network/)**.
 
@@ -73,12 +73,12 @@ https://user-images.githubusercontent.com/92325549/137086528-4a8c5c44-ce89-4a70-
 Bootstrap Command XinFin Node Setup:- 
 
 ```
-sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/XinFinOrg/XinFin-Node/master/bootstrap.sh)" root
+sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/XDCFoundation/XDCNetwork-Masternode/main/bootstrap.sh)" root
 ```
 
 Examples:- 
 ```
-$ sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/XinFinOrg/XinFin-Node/master/bootstrap.sh)" root
+$ sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/XDCFoundation/XDCNetwork-Masternode/main/bootstrap.sh)" root
 [sudo] password for user: 
 Please enter your XinFin MasterNode Name :- Demo_Server 
 Your Masternode Name is Demo_Server
@@ -89,7 +89,7 @@ Your Masternode Name is Demo_Server
 
 ---------------------------------
 
-### Method 3:- Setup XinFin Masternode Docker ###
+### Method 3:- Setup XDC Network Masternode Docker ###
 
 **Operating System**: Ubuntu 20.04 64-bit or higher 
 
@@ -101,7 +101,7 @@ Setup (For Ubuntu 20.04 64-bit or higher Operating System)
 
 **Clone repository**
 ```
-git clone https://github.com/XinFinOrg/XinFin-Node.git
+git clone https://github.com/XDCFoundation/XDCNetwork-Masternode.git
 ```
 
 Enter `XinFin-Node` directory
