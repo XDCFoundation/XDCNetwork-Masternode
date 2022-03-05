@@ -176,7 +176,7 @@ The following file and directory will be required for the migration.  This file 
 
 * **The coinbase.txt file contains the coinbase address that is assigned to the node upon deployment and startup of the XDC node.**
 
-* The keystore file contains the following data
+* The keystore directory contains the UTC file with the following data
 
 {"address":"xdcaddress_matching_the_coinbase.txt","crypto":{"cipher":"aes-128-ctr","ciphertext":"cypher_key_here","cipherparams":{"iv":"alphanumeric_code"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"alphanumeric_string"},"mac":"alphanumeric_string"},"id":"alphanumeric_string","version":3}
 
@@ -184,7 +184,7 @@ The following file and directory will be required for the migration.  This file 
 **These are the absolute path for both the coinbase.txt and the keystore directory**
 
 * **Absolute path of the "coinbase.txt" file: ~/XinFin-Node/xdcchain**
-* **Absolute path of the data stored in the keystore directory: ~/XinFin-Node/xdcchain/keystore**
+* **Absolute path of the UTC file stored in the keystore directory: ~/XinFin-Node/xdcchain/keystore**
 
 
 **Complete the following steps to perform the migration:**
@@ -195,7 +195,7 @@ The following file and directory will be required for the migration.  This file 
 sudo docker-compose -f apothem-network.yml down
 ```
 
-**Step 2:  Replace both the data in the keystore directory and the coinbase.txt file on the node**
+**Step 2:  Replace both the coinbase.txt file and the UTC file stored in the keystore directory**
 
 * **scp the files to their respective path and remove the most recent file that were created when the node was created**
 
