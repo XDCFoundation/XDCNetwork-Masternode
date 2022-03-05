@@ -166,6 +166,46 @@ To stop the node or if you encounter any issues use:
 sudo docker-compose -f apothem-network.yml down
 ```
 
+## Migrating a XDC Masternode
+
+Decentralization is one of the main focuses of the XDC Foundation and allowing node operators to migrate the nodes from one virtual private server (VPS) to another geographical locations is very important. The following steps should be used when considering migrating the nodes on the network.
+
+The following file and directory will be required for the migration.  This file and directory are created upon launching the masternode
+
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/90781928/156866126-0419c34c-959b-488d-adff-67e0d127692d.png">
+
+The coinbase.txt file contains the coinbase address that is assigned to the node upon deployment and startup of the XDC node.  
+
+The keystore file contains the following data:
+
+{"address":"xdcaddress_matching_the_coinbase.txt","crypto":{"cipher":"aes-128-ctr","ciphertext":"cypher_key_here","cipherparams":{"iv":"alphanumeric_code"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"alphanumeric_string"},"mac":"alphanumeric_string"},"id":"alphanumeric_string","version":3}
+
+These are the absolute path for both the coinbase.txt and the keystore directory 
+
+Absolute paht of the coinbase.txt file:  
+~/XinFin-Node/xdcchain
+
+Absolute path of the data keystore directory:
+ ~/XinFin-Node/xdcchain/keystore
+
+scp the files to their respective path and remove the most recent file that were created when the node was created. 
+
+Complete the following steps to perform the migration:
+
+**Step 1:  Down the node with the following command**
+
+```
+sudo docker-compose -f apothem-network.yml down
+```
+
+**Step 2:  Replace both the data in the keystore directory and the coinbase.txt file on the node**
+
+**Step 3:  Bring up the node with the following command**
+
+```
+sudo docker-compose -f apothem-network.yml up -d
+```
+
 ## Troubleshooting
 
 
@@ -176,4 +216,3 @@ Public discussions on the technical issues, post articles and request for Enhanc
 - [Reddit](https://www.reddit.com/r/xinfin/)
 - [GitHub](https://github.com/XinFinorg)
 - [XinFin FAQs](https://howto.xinfin.org/general/faq/) 
-
