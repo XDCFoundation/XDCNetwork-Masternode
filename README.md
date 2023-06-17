@@ -131,7 +131,7 @@ nano .env
 
 Run:
 ```
-sudo docker-compose -f docker-services.yml up -d
+sudo docker-compose -f docker-compose.yml up -d
 ```
 
 You should be able to see your node listed on the [XinFin Network](https://XinFin.network/) page.
@@ -141,7 +141,7 @@ Your coinbase address can be found in xdcchain/coinbase.txt file.
 
 To stop the node or if you encounter any issues use:
 ```
-sudo docker-compose -f docker-services.yml down
+sudo docker-compose -f docker-compose.yml down
 ```
 Attach XDC Console:
 ```
